@@ -1,0 +1,10 @@
+
+logs/
+artifacts/
+.vscode/
+__pycache__/
+*.pyc
+.git
+.gitignore
+*.log
+.DS_Store

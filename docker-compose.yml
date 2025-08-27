@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  ocr:
+    build: .
+    container_name: iperform-ocr
+    environment:
+      - AZURE_STORAGE_CONNECTION_STRING=${AZURE_STORAGE_CONNECTION_STRING}
+      - INPUT_QUEUE_NAME=${INPUT_QUEUE_NAME}
+      - CLASSIFICATION_QUEUE_NAME=${CLASSIFICATION_QUEUE_NAME}
+      - API_URL=${API_URL}
+      - API_KEY=${API_KEY}
+      - ARTIFACTS_DIR=artifacts
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./logs:/app/logs
+    command: python main.py
