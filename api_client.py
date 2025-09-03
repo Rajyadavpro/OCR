@@ -43,18 +43,31 @@ def insert_ocr_document(xml_payload: str) -> bool:
     logging.info(f"📋 Parameter count: {len(service_request.get('ParameterList', []))}")
     
     try:
-        # 📡 API REQUEST EXECUTION
-        logging.info("📡 EXECUTING: HTTP POST request to API")
-        request_start_time = time.time()
-        
-        logging.info(f"Calling API {api_url} to insert OCR document. Payload length: {len(xml_payload)}")
-        
-        response = requests.post(api_url, json=service_request, headers=headers, timeout=60)
-        
-        request_duration = time.time() - request_start_time
-        logging.info(f"✅ SUCCESS: HTTP request completed in {request_duration:.2f} seconds")
-        logging.info(f"📊 Response status: {response.status_code}")
-        logging.info(f"📊 Response headers: {dict(response.headers)}")
+        # 📡 API REQUEST EXECUTION with simple retries/backoff
+        logging.info("📡 EXECUTING: HTTP POST request to API (with retries)")
+        max_attempts = 3
+        backoff_seconds = 2
+        response = None
+
+        for attempt in range(1, max_attempts + 1):
+            request_start_time = time.time()
+            try:
+                logging.info(f"Calling API {api_url} to insert OCR document. Payload length: {len(xml_payload)} (attempt {attempt}/{max_attempts})")
+                response = requests.post(api_url, json=service_request, headers=headers, timeout=60)
+                request_duration = time.time() - request_start_time
+                logging.info(f"✅ SUCCESS: HTTP request completed in {request_duration:.2f} seconds")
+                logging.info(f"📊 Response status: {response.status_code}")
+                break
+            except requests.exceptions.RequestException as req_e:
+                request_duration = time.time() - request_start_time
+                logging.warning(f"⚠️ WARNING: Request attempt {attempt} failed after {request_duration:.2f}s: {req_e}")
+                if attempt < max_attempts:
+                    logging.info(f"⏳ Backing off for {backoff_seconds} seconds before retry")
+                    time.sleep(backoff_seconds)
+                    backoff_seconds *= 2
+                else:
+                    logging.error("❌ FAILURE: All retry attempts for API call failed")
+                    raise
         
         # 🔍 RESPONSE VALIDATION
         logging.info("🔍 VALIDATING: API response status")

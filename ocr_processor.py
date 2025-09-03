@@ -8,8 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Optional
 from typing import Optional, List, Dict
 
-# Setup logger
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+# Use the application's logging configuration
 logger = logging.getLogger(__name__)
 
 
@@ -127,7 +126,7 @@ def get_last_page(pdf_pages_text: List[str], first_page: int, end_identifier: Op
             normalized_page = normalize_text(pdf_pages_text[i])
             if (exact_match and re.search(rf"\b{re.escape(normalized_minus1)}\b", normalized_page)) or \
                (not exact_match and normalized_minus1 in normalized_page):
-                return i + 1 # Return the 1-based page number where end_identifier_minus1 was found
+                return i # Return the 1-based page number where end_identifier_minus1 was found
     # --- END NEW LOGIC ---
 
     return potential_end_page_idx + 1

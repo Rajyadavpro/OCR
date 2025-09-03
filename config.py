@@ -11,9 +11,11 @@ class Settings:
     # variable AZURE_STORAGE_CONNECTION_STRING (for example in a .env file or the container
     # environment). The application will fail-fast if this is not provided.
     AZURE_STORAGE_CONNECTION_STRING: Optional[str] = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
-    INPUT_QUEUE_NAME: str = os.getenv("INPUT_QUEUE_NAME", "ocrinputqueue1")
+    # INPUT_QUEUE_NAME: str = os.getenv("INPUT_QUEUE_NAME", "ocrinputqueue1")
+    INPUT_QUEUE_NAME: str = os.getenv("INPUT_QUEUE_NAME")
     # MODIFIED: Default value updated to match .env file
-    CLASSIFICATION_QUEUE_NAME: str = os.getenv("CLASSIFICATION_QUEUE_NAME", "ocrresponsequeue1")
+    # CLASSIFICATION_QUEUE_NAME: str = os.getenv("CLASSIFICATION_QUEUE_NAME", "ocrresponsequeue1")
+    CLASSIFICATION_QUEUE_NAME: str = os.getenv("CLASSIFICATION_QUEUE_NAME")
     # ADDED: Uncommented and activated BLOB_CONTAINER_NAME
     BLOB_CONTAINER_NAME: str = os.getenv("BLOB_CONTAINER_NAME", "pdfdocuments")
 
@@ -34,10 +36,7 @@ class Settings:
     SKIP_API_CALL: bool = os.getenv("SKIP_API_CALL", "false").lower() == "true"
 
 settings = Settings()
-# Fail fast if connection string isn't provided. This makes missing secret issues
-# obvious at startup instead of silently using a fallback value embedded in source.
-if not settings.AZURE_STORAGE_CONNECTION_STRING:
-    raise RuntimeError(
-        "AZURE_STORAGE_CONNECTION_STRING environment variable is required. "
-        "Set it in your environment or .env file and remove any hard-coded secrets from source."
-    )
+# Note: we intentionally do not raise at import time so the module can be imported
+# by unit tests or tooling that may not have env vars set. The runtime check is
+# performed in application startup (main.py) which verifies the presence of
+# required runtime secrets before starting processing.
