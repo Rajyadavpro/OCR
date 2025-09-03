@@ -29,6 +29,8 @@ Important variables:
 
 Security: Do NOT store real secrets in source control. Keep `.env` out of git.
 
+Tip: Copy `.env.example` to `.env` and fill in values before running the app.
+
 ## Run locally (Python)
 1. Create and activate a venv (PowerShell):
 
