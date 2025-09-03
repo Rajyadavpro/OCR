@@ -40,14 +40,7 @@ def main():
         format="%(asctime)s - %(levelname)s - %(message)s"
     )
 
-    choice = input("Which queue do you want to purge? (input/output): ").strip().lower()
-
-    if choice == "input":
-        purge_queue(settings.AZURE_STORAGE_CONNECTION_STRING, settings.INPUT_QUEUE_NAME)
-    elif choice == "output":
-        purge_queue(settings.AZURE_STORAGE_CONNECTION_STRING, settings.CLASSIFICATION_QUEUE_NAME)
-    else:
-        print("❌ Invalid choice. Please type 'input' or 'output'.")
+    purge_queue(settings.AZURE_STORAGE_CONNECTION_STRING, settings.INPUT_QUEUE_NAME)
 
 
 if __name__ == "__main__":

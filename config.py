@@ -13,7 +13,7 @@ class Settings:
     AZURE_STORAGE_CONNECTION_STRING: Optional[str] = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
     INPUT_QUEUE_NAME: str = os.getenv("INPUT_QUEUE_NAME", "ocrinputqueue1")
     # MODIFIED: Default value updated to match .env file
-    CLASSIFICATION_QUEUE_NAME: str = os.getenv("CLASSIFICATION_QUEUE_NAME", "uatdocumentclassification")
+    CLASSIFICATION_QUEUE_NAME: str = os.getenv("CLASSIFICATION_QUEUE_NAME", "ocrresponsequeue1")
     # ADDED: Uncommented and activated BLOB_CONTAINER_NAME
     BLOB_CONTAINER_NAME: str = os.getenv("BLOB_CONTAINER_NAME", "pdfdocuments")
 

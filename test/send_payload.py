@@ -26,9 +26,12 @@ except Exception:
 
 
 def main():
-    payload_path = os.path.join(os.path.dirname(__file__), 'payload.json')
-    with open(payload_path, 'r', encoding='utf-8') as f:
-        payload = f.read()
+    # Use all JSON files found in the payload folder
+    payload_dir = os.path.join(os.path.dirname(__file__), 'payload')
+    json_files = [f for f in os.listdir(payload_dir) if f.endswith('.json')]
+    if not json_files:
+        raise FileNotFoundError('No JSON files found in the payload folder.')
+    print(f"Found {len(json_files)} JSON files in the payload folder.")
 
     conn = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
     if not conn:
@@ -40,8 +43,15 @@ def main():
         queue_name = sys.argv[1]
 
     qc = QueueClient.from_connection_string(conn, queue_name)
-    qc.send_message(payload)
-    print(f'Sent payload to queue "{queue_name}"')
+    uploaded_count = 0
+    for json_file in json_files:
+        payload_path = os.path.join(payload_dir, json_file)
+        with open(payload_path, 'r', encoding='utf-8') as f:
+            payload = f.read()
+        qc.send_message(payload)
+        uploaded_count += 1
+        print(f'Sent {json_file} to queue "{queue_name}"')
+    print(f'Total files uploaded: {uploaded_count}')
 
 
 if __name__ == '__main__':
