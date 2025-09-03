@@ -23,9 +23,9 @@ Important variables:
 - `AZURE_STORAGE_CONNECTION_STRING` (required at runtime)
 - `INPUT_QUEUE_NAME` (default: `ocrinputqueue1`)
 - `CLASSIFICATION_QUEUE_NAME` (default: `ocrresponsequeue1`)
-- `API_URL` (optional)
-- `API_KEY` (optional)
 - `ARTIFACTS_DIR` (default: `artifacts`)
+
+Note: API integration is currently disabled. `API_URL` / `API_KEY` are preserved in source history but removed from `.env.example` to avoid confusion. Re-enable the API by restoring `api_client.py` usage and adding the variables back into your `.env`.
 
 Security: Do NOT store real secrets in source control. Keep `.env` out of git.
 
