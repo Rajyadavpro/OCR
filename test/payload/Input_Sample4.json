@@ -1,0 +1,83 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT2.pdf?sp=r&st=2025-09-08T09:32:08Z&se=2025-10-14T17:47:00Z&sv=2024-11-04&sig=8V0OnYJj%2FfBC%2BMLzmgJ2QXtGMva1Wu5ufMaqPU0F2n8%3D&sr=f",
+	"UploadDatasheetid": 250429,
+	"DocReceivedId": 178408,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT2.pdf",
+	"BatchId": 32212,	
+	"FirmFile": "OCRSPLIT2",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6923",
+			"DocumentTypeName": "Doc 1",
+			"StartingIdentifier": "This matter was commenced|Despite having been served|Plaintiff attaches hereto",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6924",
+			"DocumentTypeName": "DOC 2",
+			"StartingIdentifier": "On this day came on for consideration|that the Citation has been|established the amount of its|On this day came on for consideration Plaintiff's Motion for Entry of Default Judgment",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6925",
+			"DocumentTypeName": "Doc 3",
+			"StartingIdentifier": "Enclosed please find the following",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "3",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6926",
+			"DocumentTypeName": "Doc 4",
+			"StartingIdentifier": "has been notified of a future call-up|undersigned attorney hereby submits the following unsworn",
+			"EndingIdentifier": "Persons seeking to rely on this website|Active Duty status also applies to a Uniformed Service member who",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "4",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6927",
+			"DocumentTypeName": "DOC 5",
+			"StartingIdentifier": "Exhibit",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "IT IS THEREFORE ORDERED",
+			"Sequence": "5",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 1,
+			"CoverPage": " "
+		}
+	]
+}

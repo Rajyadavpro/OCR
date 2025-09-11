@@ -1,0 +1,69 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT5.pdf?sp=r&st=2025-09-08T09:58:03Z&se=2025-10-15T18:13:00Z&sv=2024-11-04&sig=%2FOw62vsYJzjNjOtxhUnA6i7NHWgYsUo61BC41cAYolk%3D&sr=f",
+	"UploadDatasheetid": 250432,
+	"DocReceivedId": 178411,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT5.pdf",
+	"BatchId": 32212,
+	"FirmFile": "OCRSPLIT5",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6935",
+			"DocumentTypeName": "DOC 1",
+			"StartingIdentifier": "MOTION FOR ENTRY OF DEFAULT",
+			"EndingIdentifier": "This is an attempt to collect",
+			"NoOfPages": 2,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6936",
+			"DocumentTypeName": "DOC 2",
+			"StartingIdentifier": "DEFAULT JUDGMENT ORDER",
+			"EndingIdentifier": "APPROVED AND SO",
+			"NoOfPages": 2,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6937",
+			"DocumentTypeName": "DOC 3",
+			"StartingIdentifier": "am of adult age|Comes now the affiant and states|Comes now affiant|am a designated agent for|personally appeared the person identified below|The undersigned affiant states|position as account services representative|The affiant is duly authorized|Affiant is competent|duly authorized to administer|am of Sound Mind",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "DEFAULT JUDGMENT ORDER",
+			"Sequence": "3",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6938",
+			"DocumentTypeName": "DOC 4",
+			"StartingIdentifier": "NON-MILITARY AFFIDAVIT",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "4",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		}
+	]
+}

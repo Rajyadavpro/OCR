@@ -1,0 +1,55 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT6.pdf?sp=r&st=2025-09-08T09:52:58Z&se=2025-10-15T18:07:00Z&sv=2024-11-04&sig=pxsJyzlvltfgj0z5qk5yKHY0ZOR1dXoVScefJhZOkOU%3D&sr=f",
+	"UploadDatasheetid": 250433,
+	"DocReceivedId": 178412,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT6.pdf",
+	"BatchId": 32212,	
+	"FirmFile": "OCRSPLIT6",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6939",
+			"DocumentTypeName": "Doc 1",
+			"StartingIdentifier": "above referenced foreclosure",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6940",
+			"DocumentTypeName": "Doc 2",
+			"StartingIdentifier": "HEREBY CERTIFY that on | copy of the foregoing",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "certification under rule | attorney who is admitted to practice",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6941",
+			"DocumentTypeName": "Doc 3",
+			"StartingIdentifier": "certification under rule | attorney who is admitted to practice",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "3",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		}
+	]
+}

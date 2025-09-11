@@ -4,12 +4,13 @@ import logging
 from azure.storage.queue import QueueClient
 
 # --- Ensure project root is on sys.path ---
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+# The repository root is the parent directory of this `test/` folder
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-# Import settings from src/config.py
-from src.config import settings
+# Import settings from config.py (project root)
+from config import settings
 
 
 def get_queue_length(conn_str: str, queue_name: str) -> int:
@@ -28,6 +29,9 @@ def main():
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s"
     )
+    if not settings.AZURE_STORAGE_CONNECTION_STRING:
+        logging.error("Missing AZURE_STORAGE_CONNECTION_STRING in environment; cannot query queues.")
+        return
 
     input_count = get_queue_length(
         settings.AZURE_STORAGE_CONNECTION_STRING,

@@ -1,0 +1,41 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT10.pdf?sp=r&st=2025-09-08T09:28:57Z&se=2025-09-08T17:43:57Z&sv=2024-11-04&sig=xruYAK30S7DgMgS7dOHQAwU2Wqt9VvupMa%2BvL6S9tMQ%3D&sr=f",
+	"UploadDatasheetid": 250437,
+	"DocReceivedId": 178407,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT10.pdf",
+	"BatchId": 32212,
+	"FirmFile": "OCRSPLIT10",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6966",
+			"DocumentTypeName": "Doc 1",
+			"StartingIdentifier": "\"NOTICE OF DISMISSAL | he Plaintiff by and through | and moves this Court for | dismissal in this case\"",
+			"EndingIdentifier": " ",
+			"NoOfPages": 2,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6967",
+			"DocumentTypeName": "Doc 2",
+			"StartingIdentifier": "\"GENERAL JUDGMENT | IT IS HEREBY ORDERED AND | ADJUDGED that this case hereby dismissed | Order Submitted by | General Judgment of Dismissal \"",
+			"EndingIdentifier": " ",
+			"NoOfPages": 2,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT3.pdf?sp=r&st=2025-09-08T10:04:12Z&se=2025-10-15T18:19:00Z&sv=2024-11-04&sig=To15Z6dzeHHUhUy0oled8FkVjo2eAklLT82oaFMjXWc%3D&sr=f",
+	"UploadDatasheetid": 250430,
+	"DocReceivedId": 178409,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT3.pdf",
+	"BatchId": 32212,
+	"FirmFile": "OCRSPLIT3",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6928",
+			"DocumentTypeName": "Doc 1",
+			"StartingIdentifier": "inal Judgment Remains Unpaid",
+			"EndingIdentifier": " ",
+			"NoOfPages": 5,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6929",
+			"DocumentTypeName": "doc 2",
+			"StartingIdentifier": "EXHIBIT A",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "Court find the Judgment remains unsatisfied | Order does not compel turnover | Court finds that the Judgment rendered in | After reviewing the evidence and the",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6930",
+			"DocumentTypeName": "Doc 3",
+			"StartingIdentifier": "Court find the Judgment remains unsatisfied|Order does not compel turnover|Court finds that the Judgment rendered in|After reviewing the evidence and the|The court has considered Judgment Creditor’s Application for Appointment of a Receiver",
+			"EndingIdentifier": "Receiver must not disburse funds to|Receiver must not disburse|expenses, including those for storage of any property|Courtapproved expenses will be taxed|within 14 days after serving Judgment Debtor",
+			"NoOfPages": 3,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "3",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6931",
+			"DocumentTypeName": "Doc 4",
+			"StartingIdentifier": "CERTIFICATE OF SERVICE|The below undersigned attorney does hereby|certify that on the below date|served Defendant with Plaintiff's Application to Appoint|pursuant to the Texas Rule of Civil Procedure, via USPS Regular Mail",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "4",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 1,
+			"CoverPage": " "
+		}
+	]
+}

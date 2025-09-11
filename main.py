@@ -33,7 +33,6 @@ shutdown_event = threading.Event()
 
 from azure_service import AzureQueueService
 from ocr_processor import get_text_from_pdf, demarcate_document
-from api_client import insert_ocr_document
 from data_models import create_subdocument_xml
 from config import settings
 
@@ -271,27 +270,11 @@ def process_message(message_content: dict, input_queue_service: AzureQueueServic
             return False
         
         # 🌐 API SUBMISSION PROCESSING
-        logger.info("🌐 PROCESSING: Submitting OCR data to API")
-        
-        if settings.SKIP_API_CALL:
-            logger.warning("⚠️ WARNING: API call is being SKIPPED due to SKIP_API_CALL=true setting")
-            is_api_success = True
-        else:
-            try:
-                is_api_success = insert_ocr_document(xml_payload)
-                if is_api_success:
-                    logger.info("✅ SUCCESS: OCR results successfully inserted via API")
-                else:
-                    logger.error("❌ FAILURE: Failed to insert document data via API. Will not queue for classification.")
-                    return False
-                    
-            except Exception as e:
-                logger.error(f"❌ FAILURE: API submission exception: {e}", exc_info=True)
-                return False
+        # NOTE: API integration removed per configuration - we skip API submission
+        logger.info("🌐 PROCESSING: API submission is skipped (API integration removed). Marking as skipped.")
+        is_api_success = True
+        api_status = "skipped"
 
-        # 📤 QUEUE MESSAGE PROCESSING
-        # logger.info("📤 PROCESSING: Preparing classification message for output queue")
-        
         # 📤 QUEUE MESSAGE PROCESSING
         logger.info("📤 PROCESSING: Preparing classification message for output queue")
 
@@ -300,7 +283,8 @@ def process_message(message_content: dict, input_queue_service: AzureQueueServic
             classification_message = {
                 "SubDocumentDetails": {
                     "SubDocumentRow": sub_document_rows
-                }
+                },
+                "ApiStatus": api_status if 'api_status' in locals() else "skipped"
             }
 
             # Save the sent message in the same message-specific folder
@@ -308,9 +292,8 @@ def process_message(message_content: dict, input_queue_service: AzureQueueServic
             with open(sent_json_path, 'w', encoding='utf-8') as f:
                 json.dump(classification_message, f, ensure_ascii=False, indent=2)
 
-
             logger.info(f"📡 PROCESSING: Sending SubDocumentDetails to classification queue: {settings.CLASSIFICATION_QUEUE_NAME}")
-            logger.info(f"📤 OUTPUT QUEUE MESSAGE: {json.dumps(classification_message, ensure_ascii=False)[:1000]}" )
+            logger.info(f"📤 OUTPUT QUEUE MESSAGE: {json.dumps(classification_message, ensure_ascii=False)[:1000]}")
             output_queue_service.send_message(
                 json.dumps(classification_message),
                 settings.CLASSIFICATION_QUEUE_NAME
@@ -321,13 +304,12 @@ def process_message(message_content: dict, input_queue_service: AzureQueueServic
             logger.error(f"❌ FAILURE: Queue message processing failed: {e}", exc_info=True)
             return False
 
-        
         # 📊 FINAL SUCCESS SUMMARY
         total_duration = time.time() - process_start_time
         logger.info("🎉 SUCCESS: Message processing completed successfully!")
         logger.info(f"⏰ Total processing time: {total_duration:.2f} seconds")
         logger.info(f"📋 UploadDatasheetid: {upload_id}")
-        
+
         return True
 
     except Exception as e:

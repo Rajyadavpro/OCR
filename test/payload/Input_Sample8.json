@@ -1,0 +1,55 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT8.pdf?sp=r&st=2025-09-08T09:56:37Z&se=2025-10-22T18:11:00Z&sv=2024-11-04&sig=Et%2BkUUxl9zqaAqFvTqqlOZPkOeEVjg9xwQNg7vsgp3o%3D&sr=f",
+	"UploadDatasheetid": 250435,
+	"DocReceivedId": 178414,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT8.pdf",
+	"BatchId": 32212,	
+	"FirmFile": "OCRSPLIT8",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6956",
+			"DocumentTypeName": "DOC 1",
+			"StartingIdentifier": "hereby file this declaration of exemption from|Amended Administrative Order|part of my investigation, I",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "HEREBY CERTIFY that on | copy of the foregoing",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6957",
+			"DocumentTypeName": "DOC 2",
+			"StartingIdentifier": "HEREBY CERTIFY that on | copy of the foregoing",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "attorney who is admitted to practice | documents in the attached submission do",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6958",
+			"DocumentTypeName": "DOC 3",
+			"StartingIdentifier": "attorney who is admitted to practice | documents in the attached submission do",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "3",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		}
+	]
+}

@@ -21,10 +21,10 @@ class Settings:
 
     # API Configuration
     # MODIFIED: Default value updated to match .env file
-    API_URL: str = os.getenv("API_URL", "https://iperformapi.azurewebsites.net/api/")
+    # API_URL: str = os.getenv("API_URL", "https://iperformapi.azurewebsites.net/api/")
     # ADDED: Added API_KEY to be read from the environment
-    API_KEY: Optional[str] = os.getenv("API_KEY")
-    INSERT_OCR_DOCUMENT_ENDPOINT: str = "Document/InsertOcrDocument"
+    # API_KEY: Optional[str] = os.getenv("API_KEY")
+    # INSERT_OCR_DOCUMENT_ENDPOINT: str = "Document/InsertOcrDocument"
 
     # Application Settings
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")

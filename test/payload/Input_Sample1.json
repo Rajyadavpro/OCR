@@ -1,0 +1,41 @@
+{
+	"FilePath": "https://iperformpilot.file.core.windows.net/iperfrom-uat/ClientUploadedDocuments/3419/ToBeSplited/32212-3419/OCRSPLIT1.pdf?sp=r&st=2025-09-08T09:18:41Z&se=2025-10-14T17:33:00Z&sv=2024-11-04&sig=qiHVo%2BudsJXB039uA2wdU%2FDLaah3GMpQLF0eQ0XDddo%3D&sr=f",	
+	"UploadDatasheetid": 250428,
+	"DocReceivedId": 178406,
+	"ClientId": "3419",
+	"ClientFileName": "OCRSPLIT1.pdf",
+	"BatchId": 32212,
+	"FirmFile": "OCRSPLIT1",
+    "OcrQueueName": "ocrinputqueue1",
+	"OcrOutputResponseQueueName": "ocrresponsequeue1",
+	"Identifiers": [
+		{
+			"DocumentTypeID": "6921",
+			"DocumentTypeName": "No fee",
+			"StartingIdentifier": "proposed judgment | conformed copy",
+			"EndingIdentifier": " ",
+			"NoOfPages": 1,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "1",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		},
+		{
+			"DocumentTypeID": "6922",
+			"DocumentTypeName": "Order",
+			"StartingIdentifier": "On this date|came on for consideration|The Court has been|IT IS THEREFORE ORDERED|ADJUDGED AND CECREED|IT IS FURTHER ORDERED",
+			"EndingIdentifier": " ",
+			"NoOfPages": 0,
+			"StartingIdentifierPlus1": "",
+			"EndingIdentifierMinus1": "",
+			"Sequence": "2",
+			"StartingMinusN": " ",
+			"EndingMinusN": " ",
+			"Occurence": 0,
+			"CoverPage": " "
+		}
+	]
+}
